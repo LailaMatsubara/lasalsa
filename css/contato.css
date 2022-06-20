@@ -1,0 +1,94 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+  padding-bottom: 0%;
+}
+
+body {
+  background-color: var(--background-black);
+}
+
+div.contato-container {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+
+div.contato-container {
+  width: 100%;
+}
+
+div.contato-container form {
+  width: 100%;
+  margin-left: 10%;
+
+  display: flex;
+  flex-direction: column;
+  padding: 0 1%;
+}
+
+div.contato-container > img {
+  width: 120%;
+  margin: 20px;
+}
+
+div.contato-container div.form-group {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  margin: 8px 0;
+  color: var(--white);
+}
+
+div.contato-container div.form-group input {
+  width: 100%;
+
+  outline: none;
+  border: 2px solid var(--lightgrey);
+  border-radius: 5px;
+
+  padding: 8px;
+  color: var(--white);
+  background-color: rgba(0, 0, 0, 0.9);
+  user-select: all;
+}
+
+div.contato-container div.form-group input:focus {
+  border: 2px solid var(--secondary);
+}
+
+div.contato-container div.form-group label {
+  padding: 5px;
+}
+
+div.contato-container div.form-group textarea {
+  width: 100%;
+  resize: none;
+
+  outline: none;
+  border: 2px solid var(--lightgrey);
+  border-radius: 5px;
+
+  padding: 8px;
+  color: var(--white);
+  background-color: rgba(0, 0, 0, 0.9);
+  user-select: all;
+}
+
+div.contato-container div.form-group textarea:focus {
+  border: 2px solid var(--secondary);
+}
+
+div.contato-container .button {
+  width: 30%;
+  text-align: center;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: none;
+}

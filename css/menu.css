@@ -1,0 +1,86 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7% 5%;
+  padding-bottom: 0%;
+}
+
+div.page-title {
+  color: var(--color);
+}
+
+div.menu {
+  padding: 0 10%;
+  width: 100%;
+  max-width: 1400px;
+  margin-bottom: 1.5rem;
+}
+
+div.menu-subgroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+div.menu-subgroup h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.2rem;
+}
+
+div.menu-subgroup > div {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+div.card-item {
+  background-color: var(--white);
+
+  margin: 0.5%;
+  padding: 1rem;
+
+  width: 49%;
+  height: 150px;
+
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 1px solid #dbdbdb;
+  border-radius: 0.5rem;
+  filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.25));
+}
+
+div.card-item > div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  padding: 0 5px;
+}
+
+div.card-item img {
+  aspect-ratio: 1/1;
+  height: 125px;
+  border-radius: 0.5rem;
+
+  object-fit: cover;
+}
+
+div.card-item h5 {
+  font-size: 0.9rem;
+  margin-bottom: 0.1rem;
+}
+
+div.card-item p {
+  font-size: 0.8rem;
+  color: var(--grey);
+}
+
+div.card-item span {
+  margin-top: 0.2rem;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,501 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+:root {
+  --background: #f3f3f3;
+  --color: #050120;
+  --primary: #27ac91;
+  --primary-dark: #20927b;
+  --white: rgba(255, 255, 255, 0.95);
+  --secondary: #ffc730;
+  --salmon: #ff6468;
+  --grey: #464646;
+  --lightgrey: #78777d;
+  --sand: #ffe397;
+  --background-dark: #022527;
+  --whatsapp-text: #1e6b14;
+  --whatsapp-button: #049624;
+  --ifood-text: #76070f;
+  --ifood-button: #fa3a3a;
+  --background-black: #0a0a0a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: 5px;
+  scrollbar-color: var(--secondary) rgba(0, 0, 0, 1);
+}
+/* Works on Firefox */
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 1);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 20px;
+  border: 3px solid rgba(0, 0, 0, 1);
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--background);
+  color: var(--color);
+  font-size: 16px;
+
+  height: auto;
+  min-height: 100vh;
+
+  overflow-x: hidden;
+}
+
+body div.background:before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 100%;
+  height: 90vh;
+  background-color: var(--primary);
+
+  z-index: -1;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 100%;
+  height: 70px;
+
+  display: flex;
+  padding: 40px 10%;
+
+  justify-content: space-between;
+  align-items: center;
+  z-index: 20;
+
+  background-color: rgba(0, 0, 0, 0.8);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+header a {
+  text-decoration: none;
+}
+
+header ul {
+  display: inline-flex;
+  list-style: none;
+}
+header ul li {
+  margin: 0px 30px;
+}
+header ul li a {
+  color: var(--white);
+  position: relative;
+
+  font-weight: 600;
+}
+
+header ul li a:before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+
+  background-color: var(--secondary);
+
+  width: 0%;
+  height: 3px;
+
+  transition: 0.3s all ease-in-out;
+}
+
+header ul li a.active:before {
+  width: 100%;
+}
+
+header ul li a:hover:before {
+  width: 100%;
+}
+
+.button {
+  color: var(--red);
+  background-color: var(--secondary);
+
+  border-radius: 15px;
+
+  padding: 8px 30px;
+  font-weight: 600;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transition: 0.2s all ease-in-out;
+}
+
+.button:hover {
+  opacity: 0.9;
+}
+
+.page-title {
+  font-weight: bold;
+  color: var(--white);
+  font-size: 2rem;
+  padding: 0 15px;
+  position: relative;
+  align-self: flex-start;
+  margin: 0 10%;
+  margin-top: 1%;
+  margin-bottom: 3%;
+}
+
+.page-title::before {
+  content: "";
+  height: 100%;
+  width: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--secondary);
+}
+
+main {
+  width: 100%;
+  height: auto;
+  min-height: calc(100vh - 40px);
+
+  padding: 0 10%;
+}
+
+main div.hero {
+  width: 100%;
+  height: 80vh;
+
+  margin-bottom: 15%;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  padding-top: 10%;
+}
+
+main div.hero .hero-title {
+  width: 100%;
+  position: relative;
+  padding: 0 15px;
+}
+
+main div.hero .hero-title:before {
+  content: "";
+  height: 100%;
+  width: 5px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-color: var(--secondary);
+}
+
+main div.hero .hero-title h1 {
+  color: var(--white);
+
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+main div.hero .hero-title h2 {
+  color: var(--secondary);
+
+  margin-top: -18px;
+
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+
+main div.hero div.hero-image {
+  position: absolute;
+  background-image: url("../img/home/taco_bg.png");
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+
+  top: 15px;
+  left: 8%;
+
+  height: 120%;
+  width: 130%;
+
+  filter: drop-shadow(0px 20px 15px rgba(19, 18, 18, 0.5));
+}
+
+main div.hero div.hero-social {
+  position: absolute;
+
+  bottom: -40px;
+}
+main div.hero div.hero-social a {
+  margin: 10px;
+}
+
+main div.experience-container {
+  width: 100%;
+  height: auto;
+
+  margin-top: 20%;
+  padding: 0 15%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 50px;
+
+  margin-bottom: -5%;
+}
+
+main div.experience-container > div {
+  margin-top: -10%;
+  height: 100%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+main div.experience-container img {
+  object-fit: cover;
+  object-position: center;
+  border-radius: 3rem;
+  width: 100%;
+  aspect-ratio: 4/5;
+}
+main div.experience-text h3 {
+  margin-left: -0.1ch;
+  font-size: 2.6rem;
+  color: var(--grey);
+}
+
+main div.experience-text h4 {
+  position: relative;
+  margin-top: -1rem;
+  font-family: "Oswald", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--salmon);
+
+  margin-bottom: 30px;
+}
+
+main div.experience-text p {
+  width: 100%;
+  color: var(--lightgrey);
+  font-size: 1.2rem;
+  margin: 4rem 0 2rem 0;
+}
+
+main div.experience-text h4:after {
+  content: "";
+  position: absolute;
+  bottom: -2rem;
+  left: 0px;
+
+  width: 90%;
+  height: 20px;
+
+  background: url("../img/home/cobrinha.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+main div.pratos-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+
+  padding: 10%;
+}
+main div.pratos-container:before {
+  content: "";
+
+  width: 120vw;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: -20%;
+
+  background-color: var(--salmon);
+  z-index: -1;
+}
+
+main div.pratos-container .pratos-text {
+  width: 70%;
+}
+
+main div.pratos-container .pratos-text h3 {
+  color: var(--white);
+  font-size: 2rem;
+}
+
+main div.pratos-container .pratos-text h4 {
+  color: var(--sand);
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-size: 3rem;
+  margin-top: -1.1rem;
+}
+
+main div.pratos-container .pratos-text p {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: bold;
+
+  margin-bottom: 10%;
+}
+
+main div.pratos-container .pratos-gallery {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 15px;
+  grid-template-areas:
+    "taco taco ."
+    ". . .";
+  max-width: 1000px;
+}
+
+main div.pratos-container .pratos-gallery > div {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+main div.pratos-container .pratos-gallery > div img {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 1rem;
+  object-position: center;
+  object-fit: cover;
+}
+
+main div.pratos-container .pratos-gallery > div span {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+
+  background-color: var(--secondary);
+  font-weight: 600;
+
+  padding: 5px 15px;
+  border-radius: 0.5rem;
+
+  transition: 0.1s all ease-in-out;
+}
+
+main div.pratos-container .pratos-gallery > div span:hover {
+  transform: scale(1.2);
+}
+.taco {
+  grid-area: taco;
+}
+
+main div.ingredient-container {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 5% 0;
+  color: var(--lightgrey);
+}
+
+main div.ingredient-container .ingredient-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+main div.ingredient-container h2 {
+  color: var(--salmon);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+main div.ingredient-container h3 {
+  color: var(--grey);
+  font-family: "Oswald", sans-serif;
+  font-size: 1.8rem;
+
+  margin-top: -0.9rem;
+  position: relative;
+}
+
+main div.ingredient-container > div > p {
+  width: 70%;
+}
+
+main div.ingredient-container .cobrinha {
+  height: 20px;
+  width: 20%;
+
+  margin-bottom: 3rem;
+
+  background: url("../img/home/cobrinha.svg");
+  background-repeat: no-repeat;
+  background-size: fill;
+}
+main div.ingredient-icons {
+  width: 100%;
+  padding: 2% 5%;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+main div.ingredient-icons div {
+  width: 100%;
+  margin: 1rem;
+}
+
+main div.ingredient-icons h4 {
+  color: var(--primary);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+footer {
+  width: 100%;
+  height: 40px;
+
+  display: grid;
+  place-items: center;
+
+  background-color: var(--primary-dark);
+  color: var(--white);
+  font-weight: 400;
+
+  position: static;
+  left: 0;
+  bottom: 0;
+}
